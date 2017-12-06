@@ -1,4 +1,5 @@
 #download data 
+
 if(!file.exists("./data")){dir.create("./data")}
 fileURL<- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileURL, destfile = "./data/activity.zip")
@@ -34,6 +35,7 @@ comb$data<-cbind(comb$subject, comb$activity, comb$data)
 
 #properly formated tidy tada, which includes mean measurement value 
 #for every subject and every activity will be in finaldata variable
+
 finaldata<-summarise_each(mydata, funs = "mean")
 
 
