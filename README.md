@@ -1,4 +1,5 @@
-#download data 
+###Script for downloading and formating fitness tracker data
+
 
 if(!file.exists("./data")){dir.create("./data")}
 fileURL<- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
